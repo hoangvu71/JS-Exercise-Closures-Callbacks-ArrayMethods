@@ -169,8 +169,7 @@ function isItContain(item, list) {
  * [2] Invoking `processDuplicateFree` passing `[1,1,2,2,3]` and `(arr) => arr.length`,
  * should return 3.
 */
-function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */) {
-  /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */
+function processDuplicateFree(list, callback) {
 }
 
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
@@ -310,8 +309,16 @@ function counterMaker() {
  * counter() // should return 0
  * etc
 */
-function counterMakerWithLimit(/* CODE HERE */) {
+function counterMakerWithLimit(n) {
   /* CODE HERE */
+  let count = 0;
+  function counter(){
+    if (count > n){
+    count = 0;
+  }
+    return count++;
+  }
+  return counter;
 }
 
 /////////////// END OF CHALLENGE ///////////////
